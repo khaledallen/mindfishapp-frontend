@@ -3,21 +3,8 @@
 <div>
   <h2>Questions</h2>
   <div>
-    {{#each model as |question|}}
-      <h3>Question: {{question.directions}}</h3>
-      <form action="">
-        <input type="radio" value="0" name="answer" id="option1"><label for="option1">{{question.option1}}</label>
-        <input type="radio" value="0" name="answer" id="option2"><label for="option2">{{question.option2}}</label>
-        <input type="radio" value="0" name="answer" id="option3"><label for="option3">{{question.option3}}</label>
-        <input type="radio" value="0" name="answer" id="option4"><label for="option4">{{question.option4}}</label>
-        <input type="submit" value="Submit">
-      </form>
-      <!-- {{radio-button name=answer value=0 id="option1"}} <label for="option1">{{question.option1}}</label>
-      {{radio-button name=answer value=0 id="option2"}} <label for="option2">{{question.option2}}</label>
-      {{radio-button name=answer value=0 id="option3"}} <label for="option3">{{question.option3}}</label>
-      {{radio-button name=answer value=0 id="option4"}} <label for="option4">{{question.option4}}</label> -->
-
-
+    {{#each model as |questionItem|}}
+      {{question-list question=questionItem}}
     {{/each}}
   </div>
 </div>
