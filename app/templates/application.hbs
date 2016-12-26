@@ -1,0 +1,25 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<div class="container">
+<nav>
+  <ul>
+    <li>
+      {{#link-to 'profile'}}
+        Profile
+      {{/link-to}}
+    </li>
+    <li>
+      {{#link-to 'questions'}}
+        Do Questions
+      {{/link-to}}
+    </li>
+  </ul>
+</nav>
+</div>
+
+<div class="wrapper">
+
+{{outlet}}
+
+
+</div>
