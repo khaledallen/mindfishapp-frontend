@@ -1,8 +1,9 @@
 <h3 class="question-title {{if isCorrect "correct"}}">Question: {{question.directions}}</h3>
-<form {{action 'checkCorrect' answer on='submit'}}>
-  <input type="radio" value="{{question.option1}}" name="answer" id="option1"><label for="option1">{{question.option1}}</label>
-  <input type="radio" value="{{question.option2}}" name="answer" id="option2"><label for="option2">{{question.option2}}</label>
-  <input type="radio" value="{{question.option3}}" name="answer" id="option3"><label for="option3">{{question.option3}}</label>
-  <input type="radio" value="{{question.option4}}" name="answer" id="option4"><label for="option4">{{question.option4}}</label>
-  <input type="submit" value="Submit">
-</form>
+
+<a {{action 'setAnswer' question.option1}} class="answer-option {{if 'this.currentAnswer==question.option1' selected}}">{{question.option1}}</a>
+<a {{action 'setAnswer' question.option2}} class="answer-option">{{question.option2}}</a>
+<a {{action 'setAnswer' question.option3}} class="answer-option">{{question.option3}}</a>
+<a {{action 'setAnswer' question.option4}} class="answer-option">{{question.option4}}</a><br>
+<a {{action 'checkCorrect' question.correct}}>Check Your Answer</a>
+
+<p>The correct answer is {{question.correct}}</p>

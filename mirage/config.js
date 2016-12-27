@@ -33,7 +33,7 @@ export default function() {
         id: '1',
         attributes: {
           directions: 'What is 2 + 2?',
-          correctAnswer: 4,
+          correct: 4,
           option1: 2,
           option2: 3,
           option3: 4,
@@ -44,7 +44,7 @@ export default function() {
         id: '2',
         attributes: {
           directions: 'What is 2 + 3?',
-          correctAnswer: 5,
+          correct: 5,
           option1: 2,
           option2: 3,
           option3: 4,
@@ -55,7 +55,7 @@ export default function() {
         id: '3',
         attributes: {
           directions: 'What is 2 + 6?',
-          correctAnswer: 6,
+          correct: 6,
           option1: 2,
           option2: 3,
           option3: 4,
