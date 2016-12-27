@@ -3,8 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   isCorrect: false,
   actions: {
-    checkCorrect(answer) {
-      if (answer == this.correctAnswer) {
+    checkCorrect(submittedAnswer) {
+      
+      if (submittedAnswer == this.correctAnswer) {
+        console.log(submittedAnswer);
+        console.log(this.correctAnswer);
         this.toggleProperty('isCorrect');
       }
     }
