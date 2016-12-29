@@ -1,9 +1,7 @@
-<h3 class="question-title {{if isCorrect "correct"}}">Question: {{question.directions}}</h3>
+<h3 class="question-title {{if isCorrect "correct"}}">Question: {{question.direction}}</h3>
 
-<a {{action 'setAnswer' question.option1}} class="answer-option {{if 'this.currentAnswer==question.option1' selected}}">{{question.option1}}</a>
+<a {{action 'setAnswer' question.option1}} class="answer-option">{{question.option1}}</a>
 <a {{action 'setAnswer' question.option2}} class="answer-option">{{question.option2}}</a>
 <a {{action 'setAnswer' question.option3}} class="answer-option">{{question.option3}}</a>
 <a {{action 'setAnswer' question.option4}} class="answer-option">{{question.option4}}</a><br>
-<a {{action 'checkCorrect' question.correct}}>Check Your Answer</a>
-
-<p>The correct answer is {{question.correct}}</p>
+<a {{action 'checkCorrect' question.answer}}>Check Your Answer</a>
