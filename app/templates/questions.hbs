@@ -2,21 +2,16 @@
 
 <div>
   <h2>Questions</h2>
-  {{#list-filter
+  
+{{#list-filter
    filter=(action 'filterByType')
    as |questions|}}
-  <ul class="question-container">
-    {{#each model as |questionItem|}}
-      <li>{{question-list question=questionItem}}</li>
-    {{/each}}
-  </ul>
-  {{/list-filter}}
-  
-  <div class="question-container">
 
     {{#each model as |questionItem|}}
+      <div class="question-container">
       {{question-list question=questionItem}}
+      </div>
     {{/each}}
+{{/list-filter}}
 
-  </div>
 </div>
