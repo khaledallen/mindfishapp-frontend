@@ -2,12 +2,12 @@
 
 <div>
   <h2>Questions</h2>
-  
+
 {{#list-filter
    filter=(action 'filterByType')
    as |questions|}}
 
-    {{#each model as |questionItem|}}
+    {{#each questions as |questionItem|}}
       <div class="question-container">
       {{question-list question=questionItem}}
       </div>
