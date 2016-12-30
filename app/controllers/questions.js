@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     filterByType(param) {
       if (param !== '') {
-        return this.get('store').query('question', {per_page: 99, filter: {categories: param}}).
+        return this.get('store').query('question', {categories:param});
       } else {
         return this.get('store').findAll('question');
       }
