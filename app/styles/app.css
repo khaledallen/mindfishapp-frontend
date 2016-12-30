@@ -53,18 +53,6 @@ h1.site-logo a {
   margin-bottom: 5px;
 }
 
-.correct {
-  background-color: #51A351;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-}
-
-.incorrect {
-  background-color: #BD362F;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-}
-
 .answer-option {
   border: 2px solid #000000;
   border-radius: 100%;
@@ -88,6 +76,16 @@ a.answer-option:hover{
   margin-top: 30px;
 }
 
+.correct {
+  background-color: #51A351;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.incorrect {
+  background-color: #BD362F;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
 }
 
 .answer-option:active {
