@@ -3,9 +3,9 @@ import DS from 'ember-data';
 //TODO configure to match question custom post type
 
 export default DS.Model.extend({
-  answer: DS.attr('number'),
+  answer: DS.attr(), //Does not need to be a number
   direction: DS.attr('string'),
-  categories: DS.attr(),
+  categories: DS.attr(), //We want this to return an array (e.g. DS.attr(array),) if possible
   option1: DS.attr(),
   option2: DS.attr(),
   option3: DS.attr(),
