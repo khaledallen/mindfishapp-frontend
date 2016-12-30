@@ -1,7 +1,5 @@
 import DS from 'ember-data';
 
-//TODO configure to match question custom post type
-
 export default DS.Model.extend({
   answer: DS.attr(), //Does not need to be a number
   direction: DS.attr('string'),
