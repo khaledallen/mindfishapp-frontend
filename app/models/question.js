@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  answer: DS.attr('number'),
+  answer: DS.attr(),
   direction: DS.attr('string'),
   categories: DS.attr(),
   option1: DS.attr(),
