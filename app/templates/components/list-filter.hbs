@@ -1,2 +1,11 @@
-{{input value=value key-up=(action 'handleFilterEntry') class="typeFilter" placeholder="Filter By Question Type"}}
+<select onchange={{action 'handleFilterEntry' value='target.value'}} name="filter" class="typeFilter">
+  <option value="" selected>Filter By Question Type</option>
+  <option value="2">Math</option>
+  <option value="3">Geo</option>
+  <option value="4">Trig</option>
+  <option value="6">Writing</option>
+</select>
+
 {{yield results}}
+
+{{input value=value key-up=(action 'handleFilterEntry') class="typeFilter" placeholder="Filter By Question Type"}}
