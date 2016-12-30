@@ -48,20 +48,9 @@ h1.site-logo a {
 
 .question-container {
   background: #e4e4e4;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 5px;
-}
-
-.correct {
-  background-color: #51A351;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-}
-
-.incorrect {
-  background-color: #BD362F;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
+  margin-bottom: 5px;
 }
 
 .answer-option {
@@ -87,8 +76,34 @@ a.answer-option:hover{
   margin-top: 30px;
 }
 
+.correct {
+  background-color: #51A351;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.incorrect {
+  background-color: #BD362F;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
 }
 
 .answer-option:active {
   background-color: green;
+}
+
+input.typeFilter {
+    font-weight: 300;
+    padding: 11px;
+    font-size: 18px;
+    width: 500px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: solid 1px lightgray;
+    display: block;
+}
+
+input.typeFilter:focus{
+  background-color: #fcfcfc;
+  outline: none;
 }
