@@ -1,7 +1,21 @@
-<h3 class="question-title {{if isCorrect "correct"}} {{if isIncorrect "incorrect"}}">Question: {{question.direction}}</h3>
+<article class="question-article">
 
-<a {{action 'setAnswer' question.option1}} class="answer-option">{{question.option1}}</a>
-<a {{action 'setAnswer' question.option2}} class="answer-option">{{question.option2}}</a>
-<a {{action 'setAnswer' question.option3}} class="answer-option">{{question.option3}}</a>
-<a {{action 'setAnswer' question.option4}} class="answer-option">{{question.option4}}</a><br><br>
+<h3 class="question-title {{if isCorrect "correct"}} {{if isIncorrect "incorrect"}}">Question: {{question.direction}}</h3>
+{{#if isImageQuestion}} {{! TODO: logic determining if question has a picture. Needs work to make isImageQuestion dependent on whether or not question.image exists}}
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="http://www.analyzemath.com/high_school_math/grade_10/graphs/trigonometry_g10_1.gif" alt=""> {{! TODO: replace src="{{question.image}\}" when WP-API is updated}}
+    <small> Click to View Larger </small>
+  </a>
+{{/if}}
+
+<div>
+
+{{! the conditionals below are possible through "ember-truth-helpers"}}
+<a {{action 'setAnswer' question.option1}} class="{{if (eq isSelected question.option1) "selected"}} answer-option">{{question.option1}}</a>
+<a {{action 'setAnswer' question.option2}} class="{{if (eq isSelected question.option2) "selected"}} answer-option">{{question.option2}}</a>
+<a {{action 'setAnswer' question.option3}} class="{{if (eq isSelected question.option3) "selected"}} answer-option">{{question.option3}}</a>
+<a {{action 'setAnswer' question.option4}} class="{{if (eq isSelected question.option4) "selected"}} answer-option">{{question.option4}}</a><br><br>
 <a {{action 'checkCorrect' question.answer}} class="answer-submit">Check Your Answer</a>
+</div>
+
+</article>
