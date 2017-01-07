@@ -13,6 +13,13 @@ export default Ember.Component.extend({
     setAnswer(answer) {
       this.set('currentAnswer', answer);
     },
+    didInsertElement() {
+        Ember.run.scheduleOnce('afterRender', this, function() {
+          this.$('.answer-option').on('click' , function() {
+            $('.answer-option').addClass('clicked');
+          });
+        });
+      },
 
     checkCorrect(check) {
       if (this.currentAnswer === check) {
@@ -23,6 +30,6 @@ export default Ember.Component.extend({
           this.set('isIncorrect',true);
         }
     }
-  },
+  }
 
 });
