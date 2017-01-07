@@ -48,19 +48,32 @@ h1.site-logo a {
 
 .question-container {
   background: #e4e4e4;
-  padding: 0.5em;
+  padding: 0.5em 2em;
   border-radius: 5px;
   margin-bottom: 5px;
 }
 
-.answer-option {
+.answer-list {
+  list-style: none;
+}
+
+.answer-list li {
+  margin-bottom: .5em;
+}
+
+.answer-option::before {
+  content: "";
   border: 2px solid #000000;
   border-radius: 100%;
   background-color: #ffffff;
-  padding: 2px 8px;
+  margin-right: .5em;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-bottom: -6px;
 }
 
-a.answer-option:hover{
+.answer-option:hover::before{
   background-color: #eee;
 }
 
@@ -88,7 +101,7 @@ a.answer-option:hover{
   border-left: 2px solid black;
 }
 
-.answer-option:active {
+.answer-option:active::before {
   background-color: green;
 }
 
