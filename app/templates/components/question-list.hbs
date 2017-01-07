@@ -1,8 +1,9 @@
 <h3 class="question-title">Question: {{question.direction}}</h3>
 
-{{question.options}}
-<a {{action 'setAnswer' option1}} class="answer-option">{{option1}}</a>
-<a {{action 'setAnswer' option2}} class="answer-option">{{option2}}</a>
-<a {{action 'setAnswer' option3}} class="answer-option">{{option3}}</a>
-<a {{action 'setAnswer' option4}} class="answer-option">{{option4}}</a><br><br>
+{{#each options as |option|}}
+  <a {{action 'setAnswer' option}} class="answer-option">{{option}}</a>
+{{/each}}
+
+<br><br>
+
 <a class="{{if isCorrect "correct"}} {{if isIncorrect "incorrect"}}"{{action 'checkCorrect' question.answer}} class="answer-submit">Check Your Answer</a>
