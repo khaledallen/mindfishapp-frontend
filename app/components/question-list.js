@@ -5,13 +5,13 @@ export default Ember.Component.extend({
   isIncorrect: false,
   currentAnswer: null,
 
-  init () {
-    this._super(...arguments);
-  },
-
   actions: {
     setAnswer(answer) {
       this.set('currentAnswer', answer);
+      this.$(".answer-option").on("click", function(){
+        $(".answer-option").removeClass("clicked");
+        $(this).addClass("clicked");
+      });
     },
 
     checkCorrect(check) {
@@ -23,6 +23,6 @@ export default Ember.Component.extend({
           this.set('isIncorrect',true);
         }
     }
-  },
+  }
 
 });
