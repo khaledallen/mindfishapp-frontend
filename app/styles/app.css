@@ -77,11 +77,13 @@ h1.site-logo a {
   background-color: #eee;
 }
 
-.clicked{
-  background-color: #f00;
+.clicked::before,
+.clicked:hover::before{
+  background-color: #000000;
 }
 
 .answer-submit {
+  color: #000000;
   border: 2px solid #000;
   border-radius: 5px;
   background-color: #afa;
