@@ -9,7 +9,7 @@
 
     {{#each questions as |questionItem|}}
       <div class="question-container">
-      {{question-list question=questionItem}}
+        {{question-list question=questionItem options=questionItem.options}}
       </div>
     {{/each}}
 {{/list-filter}}
