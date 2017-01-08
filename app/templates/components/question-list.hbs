@@ -1,7 +1,7 @@
 <h3 class="question-title">Question: {{question.direction}}</h3>
 <ul class="answer-list">
 {{#each options as |option|}}
-  <li><a {{action 'setAnswer' option}} class="answer-option"><span class="answer-description">{{option}}</span></a></li>
+  <li class="answer-option"><a {{action 'setAnswer' option}}><span class="answer-description">{{option}}</span></a></li>
 {{/each}}
 </ul>
 

@@ -61,7 +61,7 @@ h1.site-logo a {
   margin-bottom: .5em;
 }
 
-.answer-option::before {
+.answer-option a::before {
   content: "";
   border: 2px solid #000000;
   border-radius: 100%;
@@ -73,12 +73,12 @@ h1.site-logo a {
   margin-bottom: -6px;
 }
 
-.answer-option:hover::before{
+.answer-option:hover a::before{
   background-color: #eee;
 }
 
-.clicked::before,
-.clicked:hover::before{
+.clicked a::before,
+.clicked:hover a::before{
   background-color: #000000;
 }
 
