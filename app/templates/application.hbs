@@ -9,10 +9,13 @@
         Profile
       {{/link-to}}
     </li>
-    <li>
+    {{#if session.isAuthenticated}}<li>
       {{#link-to 'questions'}}
         Do Questions
       {{/link-to}}
+    </li>{{/if}}
+    <li>
+      <button {{action 'logout'}}>Log Out</button>
     </li>
   </ul>
 </nav>
