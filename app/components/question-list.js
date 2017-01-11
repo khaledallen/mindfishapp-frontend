@@ -24,8 +24,8 @@ export default Ember.Component.extend({
   didInsertElement: function() {
             Ember.run.scheduleOnce('afterRender', this, function() {
               this.$(".answer-option").on("click", function(){
-                $(this).siblings().removeClass("clicked");
-                $(this).addClass("clicked");
+                this.$(this).siblings().removeClass("clicked");
+                this.$(this).addClass("clicked");
               });
             });
     }
