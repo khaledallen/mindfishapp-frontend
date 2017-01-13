@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   password: null,
   actions: {
     authenticate() {
-      this.get('auth').authenticate('authenticator:oauth2', this.get('login'), this.get('password')).then( () => {
+      this.get('auth').authenticate('authenticator:torii', this.get('login'), this.get('password')).then( () => {
         alert('Thanks for logging in!');
         this.get('transition')();
       }, () => {

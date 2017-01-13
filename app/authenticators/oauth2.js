@@ -2,13 +2,13 @@ import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-passwor
 import Ember from 'ember';
 
 export default OAuth2PasswordGrant.extend({
-  serverTokenEndpoint: "http://mindfishapp.mtndogdevelopment.com/oauth/token",
+  serverTokenEndpoint: "http://mindfishapp.mtndogdevelopment.com/oauth1/authorize",
 
 
   makeRequest(url, data) {
 
-    var client_id = 'k9dQQ6EbpSWhMoGwZQVKTccOOlj4B2';
-    var client_secret = 'xVbLL1Rpdgh9y3yeAx5whZIuNxP7Bq';
+    var client_id = '6hnsKjjAdbtj';
+    var client_secret = 'NGXfmyYfAALZGYbJ2a1C3hw088MmyDBlMfAPbHaJYaxZSMdH';
     data.grant_type = 'password';
 
     console.log('After variables set');
