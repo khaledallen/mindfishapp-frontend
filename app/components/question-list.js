@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   isCorrect: false,
   isIncorrect: false,
   currentAnswer: null,
+  active: true,
 
   actions: {
     setAnswer(answer) {
@@ -27,6 +28,7 @@ export default Ember.Component.extend({
                 $(this).siblings().removeClass("clicked");
                 $(this).addClass("clicked");
               });
+              this.$(".question-container").addClass("active-question");
             });
     }
 

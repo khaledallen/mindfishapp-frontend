@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
-body, h1, h2, h3, h4, p {
-  font-family: 'Nunito Sans', sans-serif;
+body, h1, h2, h3, h4, p, a {
+  font-family: 'Roboto Slab', sans-serif;
+  color: #ffffff;
 }
 
 a {
     text-transform: uppercase;
     text-decoration: none;
-    color: #409bff;
     cursor: pointer;
 }
 
@@ -16,41 +16,88 @@ a {
   margin: auto;
 }
 
+.content {
+  background-color: #6ca8db;
+  padding: 55px;
+  clear: both;
+}
+
+.navigation-container {
+    width: 1070px;
+    margin: auto;
+}
+
 nav {
-    padding: 1em;
-    border-radius: 5px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.left-float {
+  float: left;
+}
+
+.right-float {
+  float: right;
 }
 
 nav ul li {
   display: inline-block;
+  padding: 1em 2em;
 }
 
 nav ul li a {
     text-transform: uppercase;
-    padding: 1em 2em;
 }
 
-nav ul li a:hover {
-    border-bottom: #409bff  solid 3px;
+nav ul li:hover {
     background-color: #e4e4e4;
 }
 
+nav ul li.home-link {
+  width: 250px;
+  padding: 0;
+}
 
-h1.site-logo a {
-    text-transform: lowercase;
-    padding: .4em 1em .55em;
+h1.site-logo a{
+  padding: 0;
+}
+
+.site-logo img {
+  width: 100%;
+}
+
+.utility-link {
+    margin-top: 30px;
+}
+
+.questions-link {
+  background: #8ac440;
+}
+
+.profile-link {
+  background: #6ca8db;
 }
 
 .question-container {
-  background: #e4e4e4;
   padding: 0.5em 2em;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+
+.question-container {
+  display: none;
+}
+
+.question-container:first-of-type {
+  display: block;
+}
+
+.active-question  {
+  display: block;
 }
 
 .answer-list {

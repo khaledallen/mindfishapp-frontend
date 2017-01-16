@@ -5,4 +5,10 @@
 {{/each}}
 </ul>
 
-<h3><a class="{{if isCorrect "correct"}} {{if isIncorrect "incorrect"}}"{{action 'checkCorrect' question.answer}} class="answer-submit">Check Your Answer</a></h3>
+<h3>
+  {{#if isCorrect}}
+    <a class="correct answer-submit" {{action 'setActive'}}>Next Question</a>
+  {{else}}
+    <a class="{{if isIncorrect "incorrect"}}" class="answer-submit" {{action 'checkCorrect' question.answer}}>Check Your Answer</a>
+  {{/if}}
+</h3>
