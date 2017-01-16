@@ -9,7 +9,7 @@
 
     {{#each questions as |questionItem|}}
       <div class="question-container">
-        {{question-list question=questionItem options=questionItem.options}}
+        {{question-list question=questionItem options=questionItem.options setActive='setActive'}}
       </div>
     {{/each}}
 {{/list-filter}}
