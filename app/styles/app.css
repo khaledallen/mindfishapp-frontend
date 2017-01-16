@@ -11,6 +11,14 @@ a {
     cursor: pointer;
 }
 
+select {
+  width: 50%;
+  height: 35px;
+  font-size: 1.2em;
+  margin: auto;
+  font-family: 'Roboto Slab';
+}
+
 .container {
   width: 80%;
   margin: auto;
