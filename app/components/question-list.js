@@ -19,6 +19,11 @@ export default Ember.Component.extend({
           this.set('isCorrect',false);
           this.set('isIncorrect',true);
         }
+    },
+
+    confirmAnswer(){
+      var confirmedAnswer = this.get('isCorrect');
+      this.sendAction('setActive' , confirmedAnswer);
     }
   },
 
@@ -28,7 +33,6 @@ export default Ember.Component.extend({
                 $(this).siblings().removeClass("clicked");
                 $(this).addClass("clicked");
               });
-              this.$(".question-container").addClass("active-question");
             });
     }
 

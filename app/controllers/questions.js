@@ -12,14 +12,11 @@ export default Ember.Controller.extend({
     },
 
     setActive() {
-      this.$('.active-question').next().addClass('active-question');
+      var answeredQuestion;
+      answeredQuestion = Ember.$('.question-container:first-of-type').detach();
+      answeredQuestion.appendTo(
+        Ember.$('.list-filter')
+      );
     }
-  },
-
-  didInsertElement: function() {
-            Ember.run.scheduleOnce('afterRender', this, function() {
-              this.$("h2").css('display', 'none');
-            });
-    }
-
+  }
 });

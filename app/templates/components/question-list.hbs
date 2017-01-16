@@ -7,8 +7,8 @@
 
 <h3>
   {{#if isCorrect}}
-    <a class="correct answer-submit" {{action 'setActive'}}>Next Question</a>
+    <a class="correct answer-submit btn" {{action 'confirmAnswer'}}>Next Question</a>
   {{else}}
-    <a class="{{if isIncorrect "incorrect"}}" class="answer-submit" {{action 'checkCorrect' question.answer}}>Check Your Answer</a>
+    <a class="{{if isIncorrect "incorrect"}}" class="answer-submit btn" {{action 'checkCorrect' question.answer}}>Check Your Answer</a>
   {{/if}}
 </h3>

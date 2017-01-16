@@ -74,8 +74,9 @@ h1.site-logo a{
     margin-top: 30px;
 }
 
-.questions-link {
+.btn {
   background: #8ac440;
+  padding: 1em 2em;
 }
 
 .profile-link {
@@ -130,24 +131,19 @@ h1.site-logo a{
 }
 
 .answer-submit {
-  color: #000000;
-  border: 2px solid #000;
-  border-radius: 5px;
-  background-color: #afa;
-  padding: 2px 8px;
-  margin-top: 30px;
-}
+    margin-top: 30px;
+    display: block;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
 
 .correct {
   background-color: #51A351;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
 }
 
 .incorrect {
   background-color: #BD362F;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
 }
 
 .answer-option:active::before {
