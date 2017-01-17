@@ -9,14 +9,24 @@
         Profile
       {{/link-to}}
     </li>
-    {{#if session.isAuthenticated}}<li>
-      {{#link-to 'questions'}}
-        Do Questions
-      {{/link-to}}
-    </li>{{/if}}
-    <li>
-      <button {{action 'logout'}}>Log Out</button>
-    </li>
+
+    {{#if session.isWorking }}
+      Working..
+    {{else}}
+      {{#if session.isAuthenticated }}
+        <li>
+          {{#link-to 'questions'}}
+            Do Questions
+          {{/link-to}}
+        </li>
+        <li>
+          <button {{action 'logout'}}>Log Out</button>
+        </li>
+      {{else}}
+        <a href="#" {{action 'signIntoWP'}}>Login</a>
+      {{/if}}
+    {{/if}}
+
   </ul>
 </nav>
 </div>
@@ -24,6 +34,5 @@
 <div class="container">
 
 {{outlet}}
-
 
 </div>
