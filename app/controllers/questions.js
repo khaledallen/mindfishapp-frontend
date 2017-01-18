@@ -9,6 +9,14 @@ export default Ember.Controller.extend({
       } else {
         return this.get('store').findAll('question');
       }
+    },
+
+    setActive() {
+      var answeredQuestion;
+      answeredQuestion = Ember.$('.question-container:first-of-type').detach();
+      answeredQuestion.appendTo(
+        Ember.$('.list-filter')
+      );
     }
   }
 });

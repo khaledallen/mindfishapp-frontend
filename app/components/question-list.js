@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   isCorrect: false,
   isIncorrect: false,
   currentAnswer: null,
+  active: true,
 
   actions: {
     setAnswer(answer) {
@@ -18,6 +19,11 @@ export default Ember.Component.extend({
           this.set('isCorrect',false);
           this.set('isIncorrect',true);
         }
+    },
+
+    confirmAnswer(){
+      var confirmedAnswer = this.get('isCorrect');
+      this.sendAction('setActive' , confirmedAnswer);
     }
   },
 
