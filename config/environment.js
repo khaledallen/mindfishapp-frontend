@@ -16,14 +16,7 @@ module.exports = function(environment) {
         Date: false
       }
     },
-    torii: {
-      providers: {
-        mindfish: {
-          redirectUri: 'http://localhost:4200',
-          apiKey: '6hnsKjjAdbtj'
-        }
-      }
-    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
