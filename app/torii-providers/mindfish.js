@@ -20,19 +20,9 @@ export default Ember.Object.extend({
         dataType: 'json',
         contentType: 'application/x-www-form-urlencoded',
         crossDomain: true,
-        /*header: {
+        header: {
           Authorization: "Basic " + btoa(client_id + ":" + client_secret)
-        }*/
-      }, {
-        success: function(response) {
-          resolve(response);
-        },
-        error: function(reason) {
-          reject(reason);
-          }
-      });
-      debugger;
-      console.log(responseData.get(responseText));
-      return responseData.get(responseText);
-    }
+        }
+    });
+  }
 });

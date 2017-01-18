@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   login: null,
   password: null,
   actions: {
-    /*authenticate() {
+    authenticate() {
 
       var options = {username: this.get('login'), password: this.get('password')};
 
@@ -17,6 +17,6 @@ export default Ember.Component.extend({
         alert('Wrong user name or password!');
       });
     }
-  }*/
+  }
 
 });
