@@ -1,11 +1,18 @@
-<h3 class="question-title">Question: {{question.direction}}</h3>
-<ul class="answer-list">
-{{#each options as |option|}}
-  <li class="answer-option"><a {{action 'setAnswer' option}}><span class="answer-description">{{option}}</span></a></li>
-{{/each}}
-</ul>
+<div class="question-directions-container">
+    {{#if hasImage}}
+    <div class="img-container">
+      <img src="{{question.image_url}}" />
+    </div>
+    {{/if}}
+    <h3 class="question-title">Question: {{question.direction}}</h3>
+    <ul class="answer-list">
+    {{#each options as |option|}}
+      <li class="answer-option"><a {{action 'setAnswer' option}}><span class="answer-description">{{option}}</span></a></li>
+    {{/each}}
+    </ul>
+</div>
 
-<h3>
+<h3 class="answer-button">
   {{#if isCorrect}}
     <a class="correct answer-submit btn" {{action 'confirmAnswer'}}>Next Question</a>
   {{else}}

@@ -5,4 +5,5 @@ export default PostModel.extend({
   answer: DS.attr(),
   direction: DS.attr('string'),
   options: DS.attr(),
+  image_url: DS.attr()
 });
