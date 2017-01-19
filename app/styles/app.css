@@ -11,6 +11,8 @@ a {
     cursor: pointer;
 }
 
+img {width: 100%;}
+
 select {
   width: 50%;
   height: 35px;
@@ -122,6 +124,17 @@ h1.site-logo a{
   list-style: none;
 }
 
+.img-container {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    width: 50%;
+}
+
+.answer-button {
+  clear: both;
+}
+
 .answer-list li {
   margin-bottom: .5em;
 }
@@ -199,6 +212,13 @@ input.typeFilter:focus{
   }
 
   .question-container {padding: .5em 0;}
+
+  .img-container {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 0;
+      width: 100%;
+  }
 
 }
 
