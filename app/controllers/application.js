@@ -1,9 +1,7 @@
 import Ember from 'ember';
-import api from 'wordpress-rest-api-oauth-1';
+//import api from 'wordpress-rest-api-oauth-1';
 
 export default Ember.Controller.extend({
-
-
 
   auth: Ember.inject.service('session'),
   actions: {

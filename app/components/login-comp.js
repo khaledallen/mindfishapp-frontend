@@ -7,18 +7,9 @@ export default Ember.Component.extend({
   password: null,
   actions: {
     authenticate() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       var options = {username: this.get('login'), password: this.get('password')};
-
-      this.get('auth').authenticate('authenticator:torii', 'mindfish', options ).then( () => {
-=======
-      this.get('auth').authenticate('authenticator:torii', this.get('login'), this.get('password')).then( () => {
->>>>>>> parent of c70e8bf... We now have a response from WP using OAuth1
-=======
-      this.get('auth').authenticate('authenticator:torii', this.get('login'), this.get('password')).then( () => {
->>>>>>> parent of c70e8bf... We now have a response from WP using OAuth1
+      debugger;
+      this.get('auth').authenticate('authenticator:torii', 'mindfish', options).then( () => {
         alert('Thanks for logging in!');
         this.get('transition')();
       }, () => {

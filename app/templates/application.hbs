@@ -3,32 +3,6 @@
 <div class="navigation-container">
 <nav>
   <ul>
-<<<<<<< HEAD
-    <li><h1 class="site-logo">{{#link-to 'profile'}}mindfish{{/link-to}}</h1></li>
-    <li>
-      {{#link-to 'profile'}}
-        Profile
-      {{/link-to}}
-    </li>
-
-    {{#if session.isWorking }}
-      Working..
-    {{else}}
-      {{#if session.isAuthenticated }}
-        <li>
-          {{#link-to 'questions'}}
-            Do Questions
-          {{/link-to}}
-        </li>
-        <li>
-          <button {{action 'logout'}}>Log Out</button>
-        </li>
-      {{else}}
-        <a href="#" {{action 'signIntoWP'}}>Login</a>
-      {{/if}}
-    {{/if}}
-
-=======
     <div class="left-float">
       <li class="home-link">
         <h1 class="site-logo">
@@ -50,7 +24,6 @@
         {{/link-to}}
       </li>
     </div>
->>>>>>> master
   </ul>
 </nav>
 </div>

@@ -5,24 +5,39 @@ export default Ember.Object.extend({
   // When your code calls `this.get('torii').open('application', options)`,
   // the `options` will be passed to this provider's `open` method.
 
-  serverTokenEndpoint: "http://mindfishapp.mtndogdevelopment.com/oauth1/authorize",
+  serverTokenEndpoint: "http://mindfishapp.mtndogdevelopment.com/oauth1/request",
 
   open: function(options) {
       // resolve with an authorization object
 
-      var client_id = '6hnsKjjAdbtj';
-      var client_secret = 'NGXfmyYfAALZGYbJ2a1C3hw088MmyDBlMfAPbHaJYaxZSMdH';
+        var parameters = {
+        oauth_consumer_key : '6hnsKjjAdbtj',
+        oauth_nonce: nonce,
+        oauth_version:1.0,
+        oauth_timestamp : timestamp,
+        oauth_signature_method : 'HMAC-SHA1'
+      };
 
-      var responseData = Ember.$.ajax({
+      var tokenSecret = null;
+      var signature = oauthSignature.generate(httpMethod, url, parameters, consumerSecret, tokenSecret);
+
+        var responseData = Ember.$.ajax({
         url: this.serverTokenEndpoint,
         type: 'POST',
-        data: options,
+        data: {
+          oauth_consumer_key: '6hnsKjjAdbtj',
+          oauth_signature_method: 'HMAC-SHA1',
+          oauth_signature: signature,
+          oauth_version:1.0,
+          oauth_timestamp : timestamp,
+        },
         dataType: 'json',
         contentType: 'application/x-www-form-urlencoded',
         crossDomain: true,
         header: {
-          Authorization: "Basic " + btoa(client_id + ":" + client_secret)
+          Authorization: "Basic " + btoa(consumerKey + ":" + consumerSecret)
         }
     });
+    
   }
 });
