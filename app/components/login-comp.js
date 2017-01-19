@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   actions: {
     authenticate() {
       var options = {username: this.get('login'), password: this.get('password')};
-      debugger;
+
       this.get('auth').authenticate('authenticator:torii', 'mindfish', options).then( () => {
         alert('Thanks for logging in!');
         this.get('transition')();

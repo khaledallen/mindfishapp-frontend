@@ -10,34 +10,25 @@ export default Ember.Object.extend({
   open: function(options) {
       // resolve with an authorization object
 
-        var parameters = {
-        oauth_consumer_key : '6hnsKjjAdbtj',
-        oauth_nonce: nonce,
-        oauth_version:1.0,
-        oauth_timestamp : timestamp,
-        oauth_signature_method : 'HMAC-SHA1'
-      };
+      var client_id = '6hnsKjjAdbtj';
+      var client_secret = 'NGXfmyYfAALZGYbJ2a1C3hw088MmyDBlMfAPbHaJYaxZSMdH';
 
-      var tokenSecret = null;
-      var signature = oauthSignature.generate(httpMethod, url, parameters, consumerSecret, tokenSecret);
-
-        var responseData = Ember.$.ajax({
+      var responseData = Ember.$.ajax({
         url: this.serverTokenEndpoint,
         type: 'POST',
         data: {
           oauth_consumer_key: '6hnsKjjAdbtj',
           oauth_signature_method: 'HMAC-SHA1',
-          oauth_signature: signature,
-          oauth_version:1.0,
-          oauth_timestamp : timestamp,
+          oauth_signature: 'mindfishapp-front',
+          oauth_timestamp: '1484783110',
+          oauth_nonce: 'B1fv894ikvI'
         },
         dataType: 'json',
         contentType: 'application/x-www-form-urlencoded',
         crossDomain: true,
         header: {
-          Authorization: "Basic " + btoa(consumerKey + ":" + consumerSecret)
+          Authorization: "Basic " + btoa(client_id + ":" + client_secret)
         }
     });
-    
   }
 });
