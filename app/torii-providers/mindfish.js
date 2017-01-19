@@ -13,6 +13,8 @@ export default Ember.Object.extend({
       var client_id = '6hnsKjjAdbtj';
       var client_secret = 'NGXfmyYfAALZGYbJ2a1C3hw088MmyDBlMfAPbHaJYaxZSMdH';
 
+      var timeStamp = Math.floor(new Date().getTime()/1000);
+
       var responseData = Ember.$.ajax({
         url: this.serverTokenEndpoint,
         type: 'POST',
@@ -20,7 +22,7 @@ export default Ember.Object.extend({
           oauth_consumer_key: '6hnsKjjAdbtj',
           oauth_signature_method: 'HMAC-SHA1',
           oauth_signature: null,
-          oauth_timestamp: null,//TODO generate the time in sec from start of UNIX,
+          oauth_timestamp: timeStamp,
           oauth_nonce: null//TODO generate a random string
         },
         dataType: 'json',
