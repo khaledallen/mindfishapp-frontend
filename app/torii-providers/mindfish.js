@@ -19,9 +19,9 @@ export default Ember.Object.extend({
         data: {
           oauth_consumer_key: '6hnsKjjAdbtj',
           oauth_signature_method: 'HMAC-SHA1',
-          oauth_signature: 'mindfishapp-front',
-          oauth_timestamp: '1484783110',
-          oauth_nonce: 'B1fv894ikvI'
+          oauth_signature: null,
+          oauth_timestamp: null,//TODO generate the time in sec from start of UNIX,
+          oauth_nonce: null//TODO generate a random string
         },
         dataType: 'json',
         contentType: 'application/x-www-form-urlencoded',
