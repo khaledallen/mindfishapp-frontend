@@ -15,6 +15,19 @@ export default Ember.Object.extend({
 
       var timeStamp = Math.floor(new Date().getTime()/1000);
 
+      var randomString = function(length) {
+          var text = "";
+          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+          for(var i = 0; i < length; i++) {
+              text += possible.charAt(Math.floor(Math.random() * possible.length));
+          }
+          return text;
+      }
+
+      // randomString function generates a random alphanumeric string for nonce
+
+      var nonce = randomString(32);
+
       var responseData = Ember.$.ajax({
         url: this.serverTokenEndpoint,
         type: 'POST',
@@ -23,7 +36,7 @@ export default Ember.Object.extend({
           oauth_signature_method: 'HMAC-SHA1',
           oauth_signature: null,
           oauth_timestamp: timeStamp,
-          oauth_nonce: null//TODO generate a random string
+          oauth_nonce: nonce
         },
         dataType: 'json',
         contentType: 'application/x-www-form-urlencoded',
