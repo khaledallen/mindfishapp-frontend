@@ -22,7 +22,7 @@ export default Ember.Object.extend({
               text += possible.charAt(Math.floor(Math.random() * possible.length));
           }
           return text;
-      }
+      };
 
       // randomString function generates a random alphanumeric string for nonce
 
